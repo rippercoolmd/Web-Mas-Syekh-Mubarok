@@ -80,7 +80,7 @@ if (!schoolNameCheck) {
 }
 const heroImageCheck = db.prepare("SELECT * FROM settings WHERE key = 'hero_image'").get();
 if (!heroImageCheck) {
-  db.prepare("INSERT INTO settings (key, value) VALUES (?, ?)").run('hero_image', 'FOTO GURU MENGAJAR DI KELAS');
+  db.prepare("INSERT INTO settings (key, value) VALUES (?, ?)").run('hero_image', 'https://files.catbox.moe/qz19pp.jpg');
 }
 const visiCheck = db.prepare("SELECT * FROM settings WHERE key = 'visi'").get();
 if (!visiCheck) {
@@ -141,9 +141,9 @@ if (statsCheck.count === 0) {
 const teacherCheck = db.prepare('SELECT count(*) as count FROM teachers').get() as { count: number };
 if (teacherCheck.count === 0) {
   const insertTeacher = db.prepare('INSERT INTO teachers (name, position, photoUrl) VALUES (?, ?, ?)');
-  insertTeacher.run('Hamdi', 'Kepala Sekolah', '/uploads/placeholder-teacher.svg');
-  insertTeacher.run('Ujang Suharja', 'Guru Matematika', '/uploads/placeholder-teacher.svg');
-  insertTeacher.run('Sahim', 'Guru Olahraga', '/uploads/placeholder-teacher.svg');
+  insertTeacher.run('Budi Santoso', 'Kepala Sekolah', '/uploads/placeholder-teacher.svg');
+  insertTeacher.run('Siti Aminah', 'Guru Matematika', '/uploads/placeholder-teacher.svg');
+  insertTeacher.run('Ahmad Rizki', 'Guru Olahraga', '/uploads/placeholder-teacher.svg');
 }
 
 const articleCheck = db.prepare('SELECT count(*) as count FROM articles').get() as { count: number };
@@ -151,14 +151,14 @@ if (articleCheck.count === 0) {
   const insertArticle = db.prepare('INSERT INTO articles (title, content, imageUrl, date, author) VALUES (?, ?, ?, ?, ?)');
   insertArticle.run(
     'Penerimaan Siswa Baru 2027',
-    'MAS SYEKH MUBAROK membuka pendaftaran siswa baru untuk tahun ajaran 2027/2028. Segera daftarkan putra-putri Anda!',
+    'MAS SYEKH MUBAROK membuka pendaftaran siswa baru untuk tahun ajaran 2024/2025. Segera daftarkan putra-putri Anda!',
     '/uploads/placeholder-news.svg',
     new Date().toISOString().split('T')[0],
     'Admin'
   );
   insertArticle.run(
-    'Juara 1 Lomba Cerdas Cermat',
-    'Selamat kepada tim cerdas cermat SD Harapan Bangsa yang telah meraih juara 1 tingkat kecamatan.',
+    'Juara 1 Lomba IT',
+    'Selamat kepada Zidan Rizki Mubarok yang telah meraih juara 1 tingkat Negara.',
     '/uploads/placeholder-news.svg',
     new Date().toISOString().split('T')[0],
     'Admin'
