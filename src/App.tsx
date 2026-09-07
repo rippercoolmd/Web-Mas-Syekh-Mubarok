@@ -63,7 +63,7 @@ const ScrollToTop = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-green-700 text-white p-3 rounded-full shadow-lg hover:bg-green-800 transition-colors z-50"
+          className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
         >
           <ArrowUp size={24} />
         </motion.button>
@@ -88,7 +88,7 @@ const Navbar = ({ onLoginClick, isLoggedIn, onLogout, scrollToSection, onViewDas
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => scrollToSection('home')}>
-            <span className="font-bold text-2xl text-green-700">{schoolName}</span>
+            <span className="font-bold text-2xl text-blue-600">{schoolName}</span>
           </div>
           
           {/* Desktop Menu */}
@@ -97,7 +97,7 @@ const Navbar = ({ onLoginClick, isLoggedIn, onLogout, scrollToSection, onViewDas
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-green-700 font-medium transition-colors"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 {item.name}
               </button>
@@ -106,7 +106,7 @@ const Navbar = ({ onLoginClick, isLoggedIn, onLogout, scrollToSection, onViewDas
               <div className="flex gap-2">
                  <button 
                   onClick={onViewDashboard}
-                  className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 transition flex items-center gap-2"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2"
                 >
                   <User size={16} /> Dashboard
                 </button>
@@ -120,7 +120,7 @@ const Navbar = ({ onLoginClick, isLoggedIn, onLogout, scrollToSection, onViewDas
             ) : (
               <button 
                 onClick={onLoginClick}
-                className="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800 transition flex items-center gap-2"
+                className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2"
               >
                 <User size={16} /> Admin
               </button>
@@ -147,7 +147,7 @@ const Navbar = ({ onLoginClick, isLoggedIn, onLogout, scrollToSection, onViewDas
                   scrollToSection(item.id);
                   setIsOpen(false);
                 }}
-                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-green-700 hover:bg-gray-50"
+                className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
               >
                 {item.name}
               </button>
@@ -156,7 +156,7 @@ const Navbar = ({ onLoginClick, isLoggedIn, onLogout, scrollToSection, onViewDas
                <>
                 <button 
                   onClick={() => { onViewDashboard(); setIsOpen(false); }}
-                  className="block w-full text-left px-3 py-2 text-green-700 font-medium"
+                  className="block w-full text-left px-3 py-2 text-blue-600 font-medium"
                 >
                   Dashboard
                 </button>
@@ -170,7 +170,7 @@ const Navbar = ({ onLoginClick, isLoggedIn, onLogout, scrollToSection, onViewDas
             ) : (
               <button 
                 onClick={() => { onLoginClick(); setIsOpen(false); }}
-                className="block w-full text-left px-3 py-2 text-green-700 font-medium"
+                className="block w-full text-left px-3 py-2 text-blue-600 font-medium"
               >
                 Login Admin
               </button>
@@ -199,15 +199,15 @@ const Hero = ({ schoolName, heroImage, registrationLink }: { schoolName: string,
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-          Membentuk Generasi <span className="text-green-300">Islami</span> & <span className="text-green-300">Berprestasi</span>
+          Mewujudkan Generasi <span className="text-blue-400">Cerdas</span> & <span className="text-blue-400">Berkarakter</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-          Selamat Datang di Website Resmi {schoolName}. Madrasah Aliyah yang berkomitmen membentuk generasi berilmu, berakhlak mulia, mandiri, dan siap menghadapi masa depan.
+          Selamat Datang di Website Resmi {schoolName}. Tempat terbaik untuk menumbuhkan potensi anak sejak dini dengan kurikulum merdeka.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button 
             onClick={() => document.getElementById('visimisi')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-green-700 hover:bg-green-800 text-white px-8 py-3.5 rounded-full text-lg font-semibold transition-all shadow-lg hover:shadow-green-600/30"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-full text-lg font-semibold transition-all shadow-lg hover:shadow-blue-500/30"
           >
             Jelajahi Profil
           </button>
@@ -215,7 +215,7 @@ const Hero = ({ schoolName, heroImage, registrationLink }: { schoolName: string,
             href={registrationLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-green-950 px-8 py-3.5 rounded-full text-lg font-semibold transition-all inline-block"
+            className="bg-transparent text-white border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3.5 rounded-full text-lg font-semibold transition-all inline-block"
           >
             Daftar Sekarang
           </a>
@@ -230,16 +230,16 @@ const VisiMisi = ({ visi, misi }: { visi: string, misi: string[] }) => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Visi & Misi</h2>
-        <div className="w-20 h-1 bg-green-700 mx-auto rounded-full"></div>
+        <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
       </div>
       
       <div className="grid md:grid-cols-2 gap-12">
         <motion.div 
           whileHover={{ y: -5 }}
-          className="bg-green-50 p-8 rounded-2xl border border-green-100 shadow-sm"
+          className="bg-blue-50 p-8 rounded-2xl border border-blue-100 shadow-sm"
         >
-          <h3 className="text-2xl font-bold text-green-800 mb-4 flex items-center gap-2">
-            <span className="bg-green-200 p-2 rounded-lg">🎯</span> Visi
+          <h3 className="text-2xl font-bold text-blue-800 mb-4 flex items-center gap-2">
+            <span className="bg-blue-200 p-2 rounded-lg">🎯</span> Visi
           </h3>
           <p className="text-gray-700 leading-relaxed text-lg">
             "{visi}"
@@ -269,7 +269,7 @@ const VisiMisi = ({ visi, misi }: { visi: string, misi: string[] }) => (
 
 const Stats = ({ stats }: { stats: Stat[] }) => {
   return (
-    <section id="stats" className="py-16 bg-green-700 text-white">
+    <section id="stats" className="py-16 bg-blue-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
@@ -283,7 +283,7 @@ const Stats = ({ stats }: { stats: Stat[] }) => {
             >
               <div className="text-4xl mb-2">{stat.icon}</div>
               <div className="text-4xl font-bold mb-1">{stat.value}</div>
-              <div className="text-green-100 font-medium">{stat.label}</div>
+              <div className="text-blue-100 font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -308,14 +308,14 @@ const Teachers = ({ teachers }: { teachers: Teacher[] }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tenaga Pendidik</h2>
-          <div className="w-20 h-1 bg-green-700 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="mt-4 text-gray-600">Guru-guru profesional yang siap membimbing putra-putri Anda.</p>
         </div>
 
         <div className="relative group px-4 md:px-12">
           <button 
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-green-700 hover:bg-green-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-ml-6 border border-gray-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-blue-600 hover:bg-blue-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-ml-6 border border-gray-100"
             aria-label="Previous"
           >
             <ChevronLeft size={24} />
@@ -323,7 +323,7 @@ const Teachers = ({ teachers }: { teachers: Teacher[] }) => {
           
           <button 
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-green-700 hover:bg-green-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-mr-6 border border-gray-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-blue-600 hover:bg-blue-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-mr-6 border border-gray-100"
             aria-label="Next"
           >
             <ChevronRight size={24} />
@@ -350,7 +350,7 @@ const Teachers = ({ teachers }: { teachers: Teacher[] }) => {
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-900 mb-1">{teacher.name}</h3>
-                  <p className="text-green-700 font-medium">{teacher.position}</p>
+                  <p className="text-blue-600 font-medium">{teacher.position}</p>
                 </div>
               </motion.div>
             ))}
@@ -377,14 +377,14 @@ const News = ({ articles, onArticleClick }: { articles: Article[], onArticleClic
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 relative">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Berita & Kegiatan</h2>
-          <div className="w-20 h-1 bg-green-700 mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
           <p className="mt-4 text-gray-600">Informasi terbaru seputar kegiatan sekolah dan prestasi siswa.</p>
         </div>
 
         <div className="relative group px-4 md:px-12">
           <button 
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-green-700 hover:bg-green-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-ml-6 border border-gray-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-blue-600 hover:bg-blue-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-ml-6 border border-gray-100"
             aria-label="Previous"
           >
             <ChevronLeft size={24} />
@@ -392,7 +392,7 @@ const News = ({ articles, onArticleClick }: { articles: Article[], onArticleClic
           
           <button 
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-green-700 hover:bg-green-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-mr-6 border border-gray-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-3 rounded-full shadow-lg text-blue-600 hover:bg-blue-50 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100 md:-mr-6 border border-gray-100"
             aria-label="Next"
           >
             <ChevronRight size={24} />
@@ -418,18 +418,18 @@ const News = ({ articles, onArticleClick }: { articles: Article[], onArticleClic
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/400x300?text=News'; }}
                   />
-                  <div className="absolute bottom-3 left-3 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-green-800 flex items-center gap-1">
+                  <div className="absolute bottom-3 left-3 z-20 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-blue-800 flex items-center gap-1">
                     <Calendar size={12} /> {article.date}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-green-700 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
                     {article.title}
                   </h3>
                   <p className="text-gray-600 line-clamp-3 mb-4 text-sm">
                     {article.content}
                   </p>
-                  <div className="flex items-center text-green-700 font-medium text-sm group-hover:translate-x-2 transition-transform">
+                  <div className="flex items-center text-blue-600 font-medium text-sm group-hover:translate-x-2 transition-transform">
                     Baca Selengkapnya →
                   </div>
                 </div>
@@ -512,7 +512,7 @@ const ArticleModal = ({ article, onClose }: { article: Article | null, onClose: 
                 <Share2 size={16} /> Bagikan Artikel
               </h4>
               <div className="flex gap-3">
-                <button onClick={() => handleShare('facebook')} className="bg-green-700 text-white p-2 rounded-full hover:bg-green-800 transition"><Facebook size={18} /></button>
+                <button onClick={() => handleShare('facebook')} className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition"><Facebook size={18} /></button>
                 <button onClick={() => handleShare('twitter')} className="bg-sky-500 text-white p-2 rounded-full hover:bg-sky-600 transition"><Twitter size={18} /></button>
                 <button onClick={() => handleShare('whatsapp')} className="bg-green-500 text-white p-2 rounded-full hover:bg-green-600 transition"><Phone size={18} className="rotate-90" /></button>
               </div>
@@ -548,7 +548,7 @@ const Footer = ({
       <div className="grid md:grid-cols-3 gap-12">
         <div>
           <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-            <span className="text-green-600">{schoolName}</span>
+            <span className="text-blue-500">{schoolName}</span>
           </h3>
           <p className="mb-6 text-gray-400">
             Membangun generasi emas yang berakhlak mulia, cerdas, dan siap menghadapi tantangan masa depan.
@@ -565,15 +565,15 @@ const Footer = ({
           <h4 className="text-lg font-bold text-white mb-6">Kontak Kami</h4>
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
-              <MapPin className="text-green-600 flex-shrink-0 mt-1" size={18} />
+              <MapPin className="text-blue-500 flex-shrink-0 mt-1" size={18} />
               <span>{contactAddress}</span>
             </li>
             <li className="flex items-center gap-3">
-              <Phone className="text-green-600 flex-shrink-0" size={18} />
+              <Phone className="text-blue-500 flex-shrink-0" size={18} />
               <span>{contactPhone}</span>
             </li>
             <li className="flex items-center gap-3">
-              <Mail className="text-green-600 flex-shrink-0" size={18} />
+              <Mail className="text-blue-500 flex-shrink-0" size={18} />
               <span>{contactEmail}</span>
             </li>
           </ul>
@@ -648,7 +648,7 @@ const AdminLogin = ({ onLogin, onClose }: { onLogin: (token: string) => void, on
               type="text" 
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
               placeholder="Username"
             />
           </div>
@@ -658,13 +658,13 @@ const AdminLogin = ({ onLogin, onClose }: { onLogin: (token: string) => void, on
               type="password" 
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
               placeholder="Password"
             />
           </div>
           <button 
             type="submit" 
-            className="w-full bg-green-700 text-white py-2 rounded-lg font-semibold hover:bg-green-800 transition"
+            className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
           >
             Login
           </button>
@@ -975,8 +975,8 @@ const AdminDashboard = ({
       imageUrl = activeTab === 'teachers' ? editingItem.photoUrl : editingItem.imageUrl;
     } else {
       imageUrl = activeTab === 'teachers' 
-        ? 'FOTO KEPALA MADRASAH'
-        : 'FOTO GURU GURU';
+        ? 'https://files.catbox.moe/c070kd.jpg'
+        : 'https://files.catbox.moe/edlv74.jpg';
     }
 
     // Always update LocalStorage first
@@ -1057,25 +1057,25 @@ const AdminDashboard = ({
           <div className="flex border-b border-gray-200">
             <button 
               onClick={() => setActiveTab('teachers')}
-              className={`flex-1 py-4 text-center font-medium ${activeTab === 'teachers' ? 'bg-green-50 text-green-700 border-b-2 border-green-700' : 'text-gray-500 hover:text-gray-700'}`}
+              className={`flex-1 py-4 text-center font-medium ${activeTab === 'teachers' ? 'bg-blue-50 text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
             >
               Manajemen Guru
             </button>
             <button 
               onClick={() => setActiveTab('articles')}
-              className={`flex-1 py-4 text-center font-medium ${activeTab === 'articles' ? 'bg-green-50 text-green-700 border-b-2 border-green-700' : 'text-gray-500 hover:text-gray-700'}`}
+              className={`flex-1 py-4 text-center font-medium ${activeTab === 'articles' ? 'bg-blue-50 text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
             >
               Manajemen Artikel
             </button>
             <button 
               onClick={() => setActiveTab('stats')}
-              className={`flex-1 py-4 text-center font-medium ${activeTab === 'stats' ? 'bg-green-50 text-green-700 border-b-2 border-green-700' : 'text-gray-500 hover:text-gray-700'}`}
+              className={`flex-1 py-4 text-center font-medium ${activeTab === 'stats' ? 'bg-blue-50 text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
             >
               Statistik
             </button>
             <button 
               onClick={() => setActiveTab('settings')}
-              className={`flex-1 py-4 text-center font-medium ${activeTab === 'settings' ? 'bg-green-50 text-green-700 border-b-2 border-green-700' : 'text-gray-500 hover:text-gray-700'}`}
+              className={`flex-1 py-4 text-center font-medium ${activeTab === 'settings' ? 'bg-blue-50 text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
             >
               Pengaturan
             </button>
@@ -1084,7 +1084,7 @@ const AdminDashboard = ({
           <div className="p-6">
             {activeTab !== 'settings' && activeTab !== 'stats' && (
               <div className="flex justify-end mb-6">
-                <button onClick={openAddModal} className="bg-green-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-green-800">
+                <button onClick={openAddModal} className="bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-blue-700">
                   <Plus size={18} /> Tambah {activeTab === 'teachers' ? 'Guru' : 'Artikel'}
                 </button>
               </div>
@@ -1102,7 +1102,7 @@ const AdminDashboard = ({
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      <button onClick={() => openEditModal(t, 'teacher')} className="p-2 text-green-700 hover:bg-green-50 rounded-lg"><Edit size={18} /></button>
+                      <button onClick={() => openEditModal(t, 'teacher')} className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"><Edit size={18} /></button>
                       <button onClick={() => handleDelete(t.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg"><Trash2 size={18} /></button>
                     </div>
                   </div>
@@ -1122,7 +1122,7 @@ const AdminDashboard = ({
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      {/* <button onClick={() => openEditModal(a)} className="p-2 text-green-700 hover:bg-green-50 rounded-lg"><Edit size={18} /></button> */}
+                      {/* <button onClick={() => openEditModal(a)} className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"><Edit size={18} /></button> */}
                       <button onClick={() => handleDelete(a.id)} className="p-2 text-red-600 hover:bg-red-50 rounded-lg"><Trash2 size={18} /></button>
                     </div>
                   </div>
@@ -1142,7 +1142,7 @@ const AdminDashboard = ({
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      <button onClick={() => openEditModal(s, 'stat')} className="p-2 text-green-700 hover:bg-green-50 rounded-lg"><Edit size={18} /></button>
+                      <button onClick={() => openEditModal(s, 'stat')} className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"><Edit size={18} /></button>
                     </div>
                   </div>
                 ))}
@@ -1158,7 +1158,7 @@ const AdminDashboard = ({
                       type="text" 
                       value={settingsSchoolName}
                       onChange={(e) => setSettingsSchoolName(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                       placeholder="Masukkan nama sekolah"
                     />
                     <p className="mt-2 text-sm text-gray-500">Nama ini akan muncul di header, footer, dan halaman utama website.</p>
@@ -1170,7 +1170,7 @@ const AdminDashboard = ({
                       type="text" 
                       value={settingsHeroImage}
                       onChange={(e) => setSettingsHeroImage(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                       placeholder="https://example.com/image.jpg"
                     />
                     <p className="mt-2 text-sm text-gray-500">Masukkan URL gambar untuk background hero section.</p>
@@ -1181,7 +1181,7 @@ const AdminDashboard = ({
                     <textarea 
                       value={settingsVisi}
                       onChange={(e) => setSettingsVisi(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition h-24"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition h-24"
                       placeholder="Masukkan visi sekolah"
                     />
                   </div>
@@ -1191,7 +1191,7 @@ const AdminDashboard = ({
                     <textarea 
                       value={settingsMisi}
                       onChange={(e) => setSettingsMisi(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition h-48"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition h-48"
                       placeholder="Masukkan misi sekolah (satu per baris)"
                     />
                     <p className="mt-2 text-sm text-gray-500">Pisahkan setiap poin misi dengan baris baru (Enter).</p>
@@ -1203,7 +1203,7 @@ const AdminDashboard = ({
                       type="text" 
                       value={settingsRegistrationLink}
                       onChange={(e) => setSettingsRegistrationLink(e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                       placeholder="https://forms.google.com/..."
                     />
                     <p className="mt-2 text-sm text-gray-500">Link yang akan dibuka saat tombol 'Daftar Sekarang' diklik.</p>
@@ -1219,7 +1219,7 @@ const AdminDashboard = ({
                           type="text" 
                           value={settingsContactAddress}
                           onChange={(e) => setSettingsContactAddress(e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                           placeholder="Jl. Pendidikan No. 123..."
                         />
                       </div>
@@ -1230,7 +1230,7 @@ const AdminDashboard = ({
                           type="text" 
                           value={settingsContactPhone}
                           onChange={(e) => setSettingsContactPhone(e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                           placeholder="(021) 1234-5678"
                         />
                       </div>
@@ -1241,7 +1241,7 @@ const AdminDashboard = ({
                           type="text" 
                           value={settingsContactEmail}
                           onChange={(e) => setSettingsContactEmail(e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                           placeholder="info@sekolah.sch.id"
                         />
                       </div>
@@ -1258,7 +1258,7 @@ const AdminDashboard = ({
                           type="text" 
                           value={settingsSocialFacebook}
                           onChange={(e) => setSettingsSocialFacebook(e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                           placeholder="https://facebook.com/..."
                         />
                       </div>
@@ -1269,7 +1269,7 @@ const AdminDashboard = ({
                           type="text" 
                           value={settingsSocialInstagram}
                           onChange={(e) => setSettingsSocialInstagram(e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                           placeholder="https://instagram.com/..."
                         />
                       </div>
@@ -1280,7 +1280,7 @@ const AdminDashboard = ({
                           type="text" 
                           value={settingsSocialTwitter}
                           onChange={(e) => setSettingsSocialTwitter(e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                           placeholder="https://twitter.com/..."
                         />
                       </div>
@@ -1291,7 +1291,7 @@ const AdminDashboard = ({
                           type="text" 
                           value={settingsSocialLinkedin}
                           onChange={(e) => setSettingsSocialLinkedin(e.target.value)}
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-green-600 outline-none transition"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                           placeholder="https://linkedin.com/..."
                         />
                       </div>
@@ -1300,7 +1300,7 @@ const AdminDashboard = ({
 
                   <button 
                     type="submit" 
-                    className="bg-green-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-800 transition"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
                   >
                     Simpan Perubahan
                   </button>
@@ -1382,7 +1382,7 @@ const AdminDashboard = ({
 
               <div className="flex gap-3 pt-4">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="flex-1 py-2 border rounded hover:bg-gray-50">Batal</button>
-                <button type="submit" className="flex-1 py-2 bg-green-700 text-white rounded hover:bg-green-800">Simpan</button>
+                <button type="submit" className="flex-1 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Simpan</button>
               </div>
             </form>
           </div>
@@ -1401,19 +1401,19 @@ export default function App() {
   const [teachers, setTeachers] = useState<Teacher[]>([]);
   const [articles, setArticles] = useState<Article[]>([]);
   const [stats, setStats] = useState<Stat[]>([]);
-  const [schoolName, setSchoolName] = useState('MAS Syekh Mubarok');
-  const [heroImage, setHeroImage] = useState('FOTO MADRASAH SYEKH MUBAROK');
-  const [visi, setVisi] = useState('Terwujudnya generasi Islami yang unggul dalam ilmu pengetahuan, berakhlakul karimah, mandiri, dan berdaya saing.');
+  const [schoolName, setSchoolName] = useState('MAS SYEKH MUBAROK');
+  const [heroImage, setHeroImage] = useState('https://files.catbox.moe/thj76v.jpg');
+  const [visi, setVisi] = useState('Terwujudnya peserta didik yang beriman, cerdas, terampil, mandiri, dan berwawasan global.');
   const [misi, setMisi] = useState([
-    'Menyelenggarakan pembelajaran berkualitas yang aktif, inovatif, dan berorientasi pada masa depan.',
-    'Menanamkan nilai-nilai keislaman dan akhlakul karimah dalam kehidupan sehari-hari.',
-    'Mengembangkan potensi, bakat, dan minat peserta didik melalui kegiatan akademik dan nonakademik.',
-    'Membangun budaya madrasah yang disiplin, bersih, hijau, aman, dan nyaman.'
+    'Melaksanakan pembelajaran yang aktif, kreatif, dan menyenangkan.',
+    'Menanamkan nilai-nilai keimanan dan ketaqwaan.',
+    'Mengembangkan bakat dan minat siswa melalui ekstrakurikuler.',
+    'Mewujudkan lingkungan sekolah yang bersih dan asri.'
   ]);
   const [registrationLink, setRegistrationLink] = useState('#');
-  const [contactAddress, setContactAddress] = useState('Sukatani, Kec. Cisoka, Kabupaten Tangerang, Banten 15730');
-  const [contactPhone, setContactPhone] = useState('+62 831-2135-3855');
-  const [contactEmail, setContactEmail] = useState('info@massyekhmubarok.sch.id');
+  const [contactAddress, setContactAddress] = Sukatani, Kec. Cisoka, Kabupaten Tangerang, Banten 15730');
+  const [contactPhone, setContactPhone] = useState('6283121353855');
+  const [contactEmail, setContactEmail] = useState('info@sdharapanbangsa.sch.id');
   const [socialFacebook, setSocialFacebook] = useState('massyekhmubarok');
   const [socialInstagram, setSocialInstagram] = useState('massyekhmubarok');
   const [socialTwitter, setSocialTwitter] = useState('#');
@@ -1522,7 +1522,7 @@ export default function App() {
             contact_address: settings.contact_address,
             contact_phone: settings.contact_phone,
             contact_email: settings.contact_email,
-            social_facebook: settings.social_facebook || 'massyekhmubaroj',
+            social_facebook: settings.social_facebook || 'massyekhmubarok',
             social_instagram: settings.social_instagram || 'massyekhmubarok',
             social_twitter: settings.social_twitter || '#',
             social_linkedin: settings.social_linkedin || '#'
@@ -1536,9 +1536,9 @@ export default function App() {
       // Mock Data Fallback (Only if LocalStorage is also empty)
       if (!localStorage.getItem('teachers')) {
         const mockTeachers = [
-          { id: 1, name: 'Kamad Hamdi', position: 'Kepala Madrasah', photoUrl: 'FOTO PAK KAMAD' },
-          { id: 2, name: 'Ujang Suharja', position: 'Guru Matematika', photoUrl: 'FOTO PAK UJANG' },
-          { id: 3, name: 'Sahim', position: 'Guru Pendidikan Jasmani', photoUrl: 'FOTO PAK SAHIM, UNTUK YANG LAIN BISA CODINGKAN ULANG' }
+          { id: 1, name: 'HAMDI', position: 'Kepala Sekolah', photoUrl: 'https://files.catbox.moe/ecyeff.jpg' },
+          { id: 2, name: 'UJANG SUHARJA', position: 'Guru Matematika', photoUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80' },
+          { id: 3, name: 'SAHIM', position: 'Guru Olahraga', photoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80' }
         ];
         setTeachers(mockTeachers);
         localStorage.setItem('teachers', JSON.stringify(mockTeachers));
@@ -1546,8 +1546,8 @@ export default function App() {
 
       if (!localStorage.getItem('articles')) {
         const mockArticles = [
-          { id: 1, title: 'Penerimaan Peserta Didik Baru', content: 'MAS Syekh Mubarok membuka pendaftaran siswa baru untuk tahun ajaran 2027/2028. Segera daftarkan putra-putri Anda!', imageUrl: 'FOTO UNTUK DAFTAR SEKOLAH', date: '2024-01-01', author: 'Admin' },
-          { id: 2, title: 'Prestasi Akademik dan Nonakademik Madrasah', content: 'Selamat kepada tim cerdas cermat MAS Syekh Mubarok yang telah meraih juara 1 tingkat kecamatan.', imageUrl: 'FOTO JUARA MAS SYEKH MUBAROK', date: '2024-02-15', author: 'Admin' }
+          { id: 1, title: 'Penerimaan Siswa Baru 2027', content: 'MAS SYEKH MUBAROK membuka pendaftaran siswa baru untuk tahun ajaran 2027/2028. Segera daftarkan putra-putri Anda!', imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', date: '2024-01-01', author: 'Admin' },
+          { id: 2, title: 'Juara 1 Lomba Paskibra', content: 'Selamat kepada tim Paskibra MAS SYEKH MUBAROK yang telah meraih juara 1 tingkat kecamatan.', imageUrl: 'https://images.unsplash.com/photo-1577896335477-2858506f970d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', date: '2024-02-15', author: 'Admin' }
         ];
         setArticles(mockArticles);
         localStorage.setItem('articles', JSON.stringify(mockArticles));
@@ -1555,10 +1555,10 @@ export default function App() {
 
       if (!localStorage.getItem('stats')) {
         const mockStats = [
-          { id: 1, label: 'Peserta Didik', value: '300+', icon: '🎓' },
-          { id: 2, label: 'Guru', value: '20', icon: '👩‍🏫' },
-          { id: 3, label: 'Kelas', value: '3', icon: '🏫' },
-          { id: 4, label: 'Prestasi', value: '150+', icon: '🏆' }
+          { id: 1, label: 'Siswa', value: '450+', icon: '🎓' },
+          { id: 2, label: 'Guru', value: '32', icon: '👩‍🏫' },
+          { id: 3, label: 'Kelas', value: '18', icon: '🏫' },
+          { id: 4, label: 'Prestasi', value: '120+', icon: '🏆' }
         ];
         setStats(mockStats);
         localStorage.setItem('stats', JSON.stringify(mockStats));
@@ -1566,9 +1566,9 @@ export default function App() {
       
       if (!localStorage.getItem('settings')) {
          const mockSettings = {
-            school_name: 'MAS Syekh Mubarok',
-            hero_image: 'FOTO MADRASAH MAS SYEKH MUBAROK',
-            visi: 'Terwujudnya generasi Islami yang unggul dalam ilmu pengetahuan, berakhlakul karimah, mandiri, dan berdaya saing.',
+            school_name: 'MAS SYEKH MUBAROK',
+            hero_image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+            visi: 'Terwujudnya peserta didik yang beriman, cerdas, terampil, mandiri, dan berwawasan global.',
             misi: JSON.stringify([
               'Melaksanakan pembelajaran yang aktif, kreatif, dan menyenangkan.',
               'Menanamkan nilai-nilai keimanan dan ketaqwaan.',
@@ -1576,9 +1576,9 @@ export default function App() {
               'Mewujudkan lingkungan sekolah yang bersih dan asri.'
             ]),
             registration_link: '#',
-            contact_address: 'Sukatani, Kec. Cisoka, Kabupaten Tangerang, Banten 15730',
-            contact_phone: '+62 831-2135-3855',
-            contact_email: 'info@massyekhmubarok.sch.id',
+            contact_address: 'Jl. Sukatani, Kec. Cisoka, Kabupaten Tangerang, Banten 15730',
+            contact_phone: '6283121353855',
+            contact_email: 'info@sdharapanbangsa.sch.id',
             social_facebook: 'massyekhmubarok',
             social_instagram: 'massyekhmubarok',
             social_twitter: '#',
